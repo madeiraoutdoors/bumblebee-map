@@ -1,0 +1,39 @@
+.canyoning-page {
+  width: 100vw;
+  height: 106vh;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2rem 2rem 1rem 2rem;
+  box-sizing: border-box;
+  }
+  .view-images-button:hover {
+    background-color: #ffea87;
+    transform: scale(1.05);
+  }
+  
+  /* Botão WhatsApp */
+  .whatsapp-book-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #00A453;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 40px;
+    text-decoration: none;
+    gap: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .whatsapp-book-button:hover {
+    transform: scale(1.05);
+    background-color: #008a46;
+  }
+  

@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route } from 'react-router-dom'
+import ScrollToTop from './pages/ScrollToTop'
 
-function App() {
-  const [count, setCount] = useState(0)
+import Home from './pages/Home'
+import Photos from './pages/Photos'
+import Extras from './pages/Extras'
+import Spots from './pages/Spots'
+import Hiking from './pages/Hiking'
+import AddEstrants from './pages/AddEstrants'
+import Dauphins from './pages/Dauphins'
+import Canyoning from './pages/Canyoning'
+import Paragliding from './pages/Paragliding'
+import Assurances from './pages/Assurances'
+import Restaurants from './pages/Restaurants'
+import ActivityGallery from './components/ActivityGallery'
 
+export default function App() {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/photos" element={<Photos />} />
+        <Route path="/extras" element={<Extras />} />
+        <Route path="/spots" element={<Spots />} />
+        <Route path="/estrants" element={<AddEstrants />} />
+        <Route path="/hiking" element={<Hiking />} />
+        <Route path="/dolphins" element={<Dauphins />} />
+        <Route path="/canyoning" element={<Canyoning />} />
+        <Route path="/paragliding" element={<Paragliding />} />
+        <Route path="/insurance" element={<Assurances />} />
+        <Route path="/restaurants" element={<Restaurants />} />
+        <Route path="/dolphins/photos" element={<ActivityGallery />} />
+        <Route path="/canyoning/photos" element={<ActivityGallery />} />
+        <Route path="/paragliding/photos" element={<ActivityGallery />} />
+       </Routes>
     </>
   )
 }
-
-export default App
