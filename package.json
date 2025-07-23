@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -r git@github.com:madeiraoutdoors/bumblebee-map.git"
+    "deploy": "gh-pages -d dist --clean -r git@github.com:madeiraoutdoors/bumblebee-map.git"
   },
   "dependencies": {
     "@fontsource/luckiest-guy": "^5.2.6",
